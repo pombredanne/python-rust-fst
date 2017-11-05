@@ -50,7 +50,7 @@ function clean_project {
     popd
 }
 
-OPENSSL_VERSION=1.0.2h
+OPENSSL_VERSION=1.0.2k
 CURL_VERSION=7.49.0
 RUST_CHANNEL=nightly
 
@@ -58,7 +58,7 @@ RUST_CHANNEL=nightly
 # use the oldest supported one
 if [[ $1 == "osx" ]]; then
     brew update
-    brew install python mmv
+    brew install mmv
     pip install -U pip setuptools wheel
     install_rust $RUST_CHANNEL
     pip wheel . -w ./wheelhouse
